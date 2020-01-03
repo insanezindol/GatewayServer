@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway-server
+  main:
+    allow-bean-definition-overriding: true
+ 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    enabled: true
+
+logging:
+  level:
+    com:
+      netflix:
+        config:
+          sources:
+            URLConfigurationSource: ERROR
+    org:
+      springframework:
+        retry: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
