@@ -6,6 +6,11 @@ spring:
     name: gateway-server
   main:
     allow-bean-definition-overriding: true
+  zipkin:
+    base-url: http://ubuntu-server:9411
+  sleuth:
+    sampler:
+      probability: 1
  
 eureka:
   client:
